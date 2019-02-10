@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DB7DB0B2C4ABD72002B3407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B5BC714220F55D20047CFA4 /* Assets.xcassets */; };
+		8DB7DB0C2C4ABD75002B3407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B5BC714220F55D20047CFA4 /* Assets.xcassets */; };
 		9B5BC70E220F55C20047CFA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5BC70D220F55C20047CFA4 /* AppDelegate.swift */; };
 		9B5BC710220F55C20047CFA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5BC70F220F55C20047CFA4 /* ViewController.swift */; };
 		9B5BC713220F55C20047CFA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5BC711220F55C20047CFA4 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 		9B9F7B9C22104562009C9359 /* TAUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9F7B9B22104562009C9359 /* TAUUITests.swift */; };
 		9B9F7BAA22109B3D009C9359 /* TAUUITestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9F7BA922109B3D009C9359 /* TAUUITestBase.swift */; };
 		9B9F7BB62210B27E009C9359 /* BDDTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9F7BB52210B27E009C9359 /* BDDTest.swift */; };
+		9B9F7BB82210E64F009C9359 /* TAUSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9F7BB72210E64F009C9359 /* TAUSteps.swift */; };
+		9B9F7BBA2210E660009C9359 /* TAUScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9F7BB92210E660009C9359 /* TAUScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,8 @@
 		9B9F7B9D22104562009C9359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B9F7BA922109B3D009C9359 /* TAUUITestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAUUITestBase.swift; sourceTree = "<group>"; };
 		9B9F7BB52210B27E009C9359 /* BDDTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDDTest.swift; sourceTree = "<group>"; };
+		9B9F7BB72210E64F009C9359 /* TAUSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAUSteps.swift; sourceTree = "<group>"; };
+		9B9F7BB92210E660009C9359 /* TAUScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAUScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,12 +129,46 @@
 		9B9F7B9A22104562009C9359 /* TAUUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9B9F7B9B22104562009C9359 /* TAUUITests.swift */,
+				9B9F7BBE2210E6E0009C9359 /* Tests */,
+				9B9F7BBD2210E6D8009C9359 /* Steps */,
+				9B9F7BBC2210E6CC009C9359 /* XCUIElemets */,
+				9B9F7BBB2210E6C2009C9359 /* Base */,
 				9B9F7B9D22104562009C9359 /* Info.plist */,
-				9B9F7BA922109B3D009C9359 /* TAUUITestBase.swift */,
-				9B9F7BB52210B27E009C9359 /* BDDTest.swift */,
 			);
 			path = TAUUITests;
+			sourceTree = "<group>";
+		};
+		9B9F7BBB2210E6C2009C9359 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9B9F7BA922109B3D009C9359 /* TAUUITestBase.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9B9F7BBC2210E6CC009C9359 /* XCUIElemets */ = {
+			isa = PBXGroup;
+			children = (
+				9B9F7BB92210E660009C9359 /* TAUScreen.swift */,
+			);
+			path = XCUIElemets;
+			sourceTree = "<group>";
+		};
+		9B9F7BBD2210E6D8009C9359 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				9B9F7BB72210E64F009C9359 /* TAUSteps.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		9B9F7BBE2210E6E0009C9359 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9B9F7B9B22104562009C9359 /* TAUUITests.swift */,
+				9B9F7BB52210B27E009C9359 /* BDDTest.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,19 +239,22 @@
 				TargetAttributes = {
 					9B5BC709220F55C20047CFA4 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = "";
 					};
 					9B5BC71D220F55D20047CFA4 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = "";
 						TestTargetID = 9B5BC709220F55C20047CFA4;
 					};
 					9B9F7B9822104561009C9359 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = "";
 						TestTargetID = 9B5BC709220F55C20047CFA4;
 					};
 				};
 			};
 			buildConfigurationList = 9B5BC705220F55C20047CFA4 /* Build configuration list for PBXProject "TAU" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -245,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB7DB0B2C4ABD72002B3407 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB7DB0C2C4ABD75002B3407 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +326,8 @@
 			files = (
 				9B9F7BB62210B27E009C9359 /* BDDTest.swift in Sources */,
 				9B9F7B9C22104562009C9359 /* TAUUITests.swift in Sources */,
+				9B9F7BB82210E64F009C9359 /* TAUSteps.swift in Sources */,
+				9B9F7BBA2210E660009C9359 /* TAUScreen.swift in Sources */,
 				9B9F7BAA22109B3D009C9359 /* TAUUITestBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,7 +489,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E8YSTT4EW3;
+				DEVELOPMENT_TEAM = YS872W34KH;
 				INFOPLIST_FILE = TAU/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,8 +498,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shashikant.TAU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -471,8 +522,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shashikant.TAU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -491,8 +546,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shashikant.TAUTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TAU.app/TAU";
 			};
 			name = Debug;
@@ -512,8 +571,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shashikant.TAUTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TAU.app/TAU";
 			};
 			name = Release;
@@ -521,18 +584,24 @@
 		9B9F7BA022104562009C9359 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E8YSTT4EW3;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TAUUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shashikant.TAUUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shashikant.TAUUITests-ollven";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = TAU;
 			};
 			name = Debug;
@@ -541,7 +610,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E8YSTT4EW3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TAUUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,8 +619,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shashikant.TAUUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = TAU;
 			};
 			name = Release;
